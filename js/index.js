@@ -32,3 +32,10 @@ dragitem.addEventListener("drag", event => {
     event.preventDefault()
     adventure.style.color = "red";
 });
+
+// load
+window.addEventListener("load", () => {
+    alert("Locked and Loaded!");
+},
+    { once: true }
+);
