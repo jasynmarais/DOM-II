@@ -74,3 +74,7 @@ doubleclick.addEventListener('dblclick', () => {
     event.stopImmediatePropagation();
 });
 
+let propdoubleclick = document.querySelector(".destination");
+propdoubleclick.addEventListener('dblclick', () => {
+    alert("Destination Double Click!!!");
+});
