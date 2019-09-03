@@ -41,11 +41,17 @@ window.addEventListener("load", () => {
 );
 
 // focus
-let focush2 = document.getElementById("destinationh2");
-focush2.addEventListener("focus", event => {
-    event.target.style.background = "purple";
-    alert("Focus");
-});
+var x = document.getElementById("myForm");
+x.addEventListener("focus", myFocusFunction, true);
+x.addEventListener("blur", myBlurFunction, true);
+
+function myFocusFunction() {
+  document.getElementById("myInput").style.backgroundColor = "purple";  
+}
+
+function myBlurFunction() {
+  document.getElementById("myInput").style.backgroundColor = "";  
+}
 
 // resize
 window.addEventListener("resize", () => {
