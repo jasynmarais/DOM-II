@@ -53,3 +53,10 @@ window.addEventListener("resize", () => {
 },
     { once: true }
 );
+
+//scroll
+document.addEventListener("scroll", () => {
+    alert("SCROLLING!!!");
+},
+   { once: true }
+);
