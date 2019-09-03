@@ -18,8 +18,17 @@ document.addEventListener("keydown",() => {
     {once:true}
 );
 
-//wheel
+// wheel
 let wheelitem = document.getElementById("funbustext");
 wheelitem.addEventListener("wheel" , () => {
     wheelitem.style.fontSize = "3.5rem";
+});
+
+// drag/drop
+let dragitem = document.querySelector(".rounded");
+let adventure = document.querySelector("#adventure");
+dragitem.addEventListener("drag", event => {
+    //Prevent Default
+    event.preventDefault()
+    adventure.style.color = "red";
 });
