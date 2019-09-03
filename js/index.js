@@ -39,3 +39,17 @@ window.addEventListener("load", () => {
 },
     { once: true }
 );
+
+// focus
+let focush2 = document.getElementById("destinationh2");
+focush2.addEventListener("focus", event => {
+    event.target.style.background = "purple";
+    alert("Focus");
+});
+
+// resize
+window.addEventListener("resize", () => {
+    alert("RESIZING!!!");
+},
+    { once: true }
+);
