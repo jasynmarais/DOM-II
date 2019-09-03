@@ -7,13 +7,19 @@ magicbus.addEventListener("mouseover", event => {
     event.target.style.visibility="hidden";
     setTimeout(function () {
         event.target.style.visibility = "visible";
-    }, 500);
+    }, 600);
 }, {once:true}
 );
 
-//keydown
+// keydown
 document.addEventListener("keydown",() => {
     alert("Work Harder!");
     },
     {once:true}
 );
+
+//wheel
+let wheelitem = document.getElementById("funbustext");
+wheelitem.addEventListener("wheel" , () => {
+    wheelitem.style.fontSize = "3.5rem";
+});
