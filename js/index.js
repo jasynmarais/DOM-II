@@ -11,3 +11,9 @@ magicbus.addEventListener("mouseover", event => {
 }, {once:true}
 );
 
+//keydown
+document.addEventListener("keydown",() => {
+    alert("Work Harder!");
+    },
+    {once:true}
+);
