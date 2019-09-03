@@ -54,9 +54,15 @@ window.addEventListener("resize", () => {
     { once: true }
 );
 
-//scroll
+// scroll
 document.addEventListener("scroll", () => {
     alert("SCROLLING!!!");
 },
    { once: true }
 );
+
+//select
+let textselect = document.getElementById("textselection");
+textselect.addEventListener("select", event => {
+    event.target.style.color = "blue";
+});
