@@ -61,8 +61,16 @@ document.addEventListener("scroll", () => {
    { once: true }
 );
 
-//select
+// select
 let textselect = document.getElementById("textselection");
 textselect.addEventListener("select", event => {
     event.target.style.color = "blue";
 });
+
+// doubleclick
+let doubleclick = document.getElementById("btn1");
+doubleclick.addEventListener('dblclick', () => {
+    alert("DOUBLE CLICK!!!");
+    event.stopImmediatePropagation();
+});
+
