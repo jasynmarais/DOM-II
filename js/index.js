@@ -69,11 +69,22 @@ button[1].addEventListener('dblclick', (e) => {
 
 const navEl = document.querySelectorAll('.main-navigation a');
 
+// focus
 navEl.forEach(item => item.addEventListener('focus', (e) => {
   e.target.style.color = 'red';    
 }));
 
+// blur
 navEl.forEach(item => item.addEventListener('blur', (e) => {
   e.target.style.color = '';    
 }));
+
+// Add resize event on window
+
+function reportWindowSize() {
+    console.log(`Window Height: ${window.innerHeight}`);
+    console.log(`Window Width: ${window.innerWidth}`);
+  }
+  
+  window.addEventListener('resize', reportWindowSize);
 
