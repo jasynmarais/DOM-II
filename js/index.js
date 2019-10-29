@@ -40,8 +40,11 @@ window.addEventListener("load", () => {
 
 const button = document.querySelectorAll('.btn');
 button[0].textContent = 'Style the Navigation';
+
 button[0].addEventListener('click', (e) => {
-  const navEl = document.querySelector('.main-navigation')
+    e.stopPropagation(); //stop propagation
+    const navEl = document.querySelector('.main-navigation')
+
   if (navEl.style.background !== 'yellow') {
     navEl.style.background = 'yellow';
     button[0].textContent = 'Revert';
@@ -100,3 +103,4 @@ destinationDiv.addEventListener('click', (e) => {
     destinationDiv.style.background = 'initial';
   }
 })
+
