@@ -36,3 +36,32 @@ window.addEventListener("load", () => {
     { once: true }
 );
 
+// click event
+
+const button = document.querySelectorAll('.btn');
+button[0].textContent = 'Style the Navigation';
+button[0].addEventListener('click', (e) => {
+  const navEl = document.querySelector('.main-navigation')
+  if (navEl.style.background !== 'yellow') {
+    navEl.style.background = 'yellow';
+    button.textContent = 'Change back';
+  } else {
+    navEl.style.background = '';
+    button.textContent = 'Style the Navigation';
+  }
+})
+
+// double click event
+
+button[1].textContent = 'Double Click Me'
+button[1].addEventListener('dblclick', (e) => {
+  const navEl = document.querySelector('.main-navigation');
+  if (navEl.style.display !== 'none') {
+    navEl.style.display = 'none';
+    button[1].textContent = 'Bring Navigation Back';
+  } else {
+    navEl.style.display = 'initial';
+    button[1].textContent = 'Double Click Me';
+  };	  
+});
+
