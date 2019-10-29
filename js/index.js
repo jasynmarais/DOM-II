@@ -12,3 +12,18 @@ h2El.forEach(item => item.addEventListener('mouseover', (e) => {
     item.style.color = 'black';
   }
 }))
+
+// keydown event
+
+document.addEventListener("keydown",() => {
+    alert("Work Harder!");
+    },
+    {once:true}
+);
+
+// wheel event
+
+let wheelitem = document.getElementById("funbustext");
+wheelitem.addEventListener("wheel" , () => {
+    wheelitem.style.fontSize = "3.5rem";
+});
