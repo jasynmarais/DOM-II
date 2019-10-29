@@ -15,11 +15,18 @@ h2El.forEach(item => item.addEventListener('mouseover', (e) => {
 
 // keydown event
 
-document.addEventListener("keydown",() => {
-    alert("Work Harder!");
-    },
-    {once:true}
-);
+window.addEventListener('keydown', (e) => {
+    let code = e.code;
+    console.log(`You pressed the ${code} key.`)
+})
+
+// Add keyup event log key to console
+
+document.addEventListener('keyup', logKey);
+
+function logKey(e) {
+  console.log(e.code);
+}
 
 // wheel event
 
