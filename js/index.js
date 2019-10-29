@@ -88,3 +88,15 @@ function reportWindowSize() {
   
   window.addEventListener('resize', reportWindowSize);
 
+// Add nested click event
+
+const destinationDiv = document.querySelector('.destination');
+destinationDiv.style.cursor = 'pointer';
+
+destinationDiv.addEventListener('click', (e) => {
+  if (destinationDiv.style.background !== 'red') {
+    destinationDiv.style.background = 'red';
+  } else {
+    destinationDiv.style.background = 'initial';
+  }
+})
