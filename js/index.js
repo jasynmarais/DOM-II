@@ -79,6 +79,12 @@ button[1].addEventListener('dblclick', (e) => {
 
 const navEl = document.querySelectorAll('.main-navigation a');
 
+// Stop nav items from refreshig page by using prevent default 
+
+navEl.forEach(item => item.addEventListener('click', (e) => {
+    e.preventDefault();
+  }));
+
 // focus
 navEl.forEach(item => item.addEventListener('focus', (e) => {
   e.target.style.color = 'red';    
