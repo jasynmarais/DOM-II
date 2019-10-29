@@ -1,13 +1,14 @@
 // Your code goes here
 
-// mouseover
-let magicbus = document.getElementById("funbus");
+// mouseover event
 
-magicbus.addEventListener("mouseover", event => {
-    event.target.style.visibility="hidden";
-    setTimeout(function () {
-        event.target.style.visibility = "visible";
-    }, 500);
-}, {once:true}
-);
+const h2El = document.querySelectorAll('h2');
 
+h2El.forEach(item => item.addEventListener('mouseover', (e) => {
+  item.style.cursor = 'pointer';
+  if (item.style.color != 'green') {
+    item.style.color = 'green';
+  } else {
+    item.style.color = 'black';
+  }
+}))
