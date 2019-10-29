@@ -25,5 +25,14 @@ document.addEventListener("keydown",() => {
 
 let wheelitem = document.getElementById("funbustext");
 wheelitem.addEventListener("wheel" , () => {
-    wheelitem.style.fontSize = "3.5rem";
+    wheelitem.style.fontSize = "3rem";
 });
+
+// load event
+
+window.addEventListener("load", () => {
+    alert("Locked and Loaded!");
+},
+    { once: true }
+);
+
